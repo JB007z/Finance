@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+
+    <form action="/confirm_buy" method="post">
+        <div style="border: 1px solid black; padding: 5px; display: inline-block; margin-bottom: 10px;margin-right:20px;">
+            <p><strong>Symbol: {{symbol}}</strong> <br>  Shares: {{shares }}<br> Price of Stock: {{ stock_price }}<br> Purchase total is: {{ total_stock }}</p>
+        </div>
+
+
+        <button class="btn btn-primary" type="submit">Confirm buy</button>
+    </form>
+{% endblock %}

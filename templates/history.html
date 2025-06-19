@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+{%for action in history_details%}
+<div style="border: 1px solid black; padding: 5px; display: inline-block; margin-bottom: 10px;margin-right:20px;">
+    <p><strong> Type: {{action["type"]}} </strong><br>  Symbol: {{ action["symbol"] }} <br>  Shares: {{ action["shares"] }}<br>  Value:{{ action["value"] }}</p>
+</div>
+
+
+{%endfor%}
+
+
+{% endblock %}

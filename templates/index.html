@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    {% for stock in stock_details%}
+    <div style="border: 1px solid black; padding: 5px; display: inline-block; margin-bottom: 10px;margin-right:20px;">
+            <p><strong>Symbol: {{ stock["symbol"] }}</strong> <br>  Shares: {{ stock["shares"] }}<br> Price of Stock: {{ stock["stock_price"] }}<br> Total value in {{ stock["symbol"] }} is: {{ stock["total_stock"] }}</p>
+    </div>
+        {%endfor%}
+        <h3 >Cash: {{cash|round(2)}}</h3>
+        <h3 >Investments:{{investments|round(2)}}</h3>
+        <h3 >Total(cash + investments):{{total|round(2)}}</h3>
+
+
+
+
+{% endblock %}
